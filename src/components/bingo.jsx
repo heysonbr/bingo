@@ -190,6 +190,14 @@ export default function Bingo() {
           ))}
         </div>
       </div>
+      <footer className="mt-10">
+        <a
+          className="hover:text-green-400"
+          href="https://www.linkedin.com/in/heyson-br/"
+        >
+          HeysonBR
+        </a>{" "}
+      </footer>
     </div>
   );
 }
