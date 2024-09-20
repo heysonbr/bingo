@@ -91,6 +91,23 @@ export default function Bingo() {
     return "purple-500";
   }
 
+  function speak(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "es-ES"; // Español
+    utterance.voice = window.speechSynthesis
+      .getVoices()
+      .find(
+        (voice) => voice.name === "Google Español" && voice.lang === "es-ES"
+      ); // Voz femenina
+    window.speechSynthesis.speak(utterance);
+  }
+
+  useEffect(() => {
+    if (currentNumber !== null) {
+      speak(`${getLetter(currentNumber)} ${currentNumber}`);
+    }
+  }, [currentNumber]);
+
   return (
     <div className="flex flex-col justify-center items-center mt-10">
       <div className="flex gap-10 items-center justify-center">
