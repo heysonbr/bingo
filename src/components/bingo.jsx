@@ -110,7 +110,7 @@ export default function Bingo() {
 
   return (
     <div className="flex flex-col justify-center items-center mt-10">
-      <div className="flex gap-10 items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           {" "}
           <div className="mt-10 mb-5 flex flex-col justify-center items-center text-center">
